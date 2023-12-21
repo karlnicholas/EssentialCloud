@@ -1,0 +1,27 @@
+spring:
+  main:
+    web-application-type: servlet
+  security:
+    oauth2:
+      resourceserver:
+        jwt.issuer-uri: ${essentialcloud-issuer-uri}
+      client:
+        registration:
+          auth0-login:
+            client-id: ${essentialcloud-client-id}
+            client-secret: ${essentialcloud-client-secret}
+            provider: auth0
+            authorization-grant-type: client_credentials
+        provider:
+          auth0:
+            issuer-uri: ${essentialcloud-issuer-uri}
+
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true
+server:
+  port: 8090
+logging:
+  level:
+    org:
+      springframework: INFO

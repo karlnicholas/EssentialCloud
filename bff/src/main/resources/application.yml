@@ -1,0 +1,23 @@
+
+spring:
+  main:
+    web-application-type: servlet
+  security:
+    oauth2:
+      client:
+        registration:
+          auth0-login:
+            client-id: ${essentialcloud-client-id}
+            client-secret: ${essentialcloud-client-secret}
+            provider: auth0
+            scope: openid,profile,transferbroker
+        provider:
+          auth0:
+            issuer-uri: ${essentialcloud-issuer-uri}
+
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security: DEBUG
+

@@ -1,0 +1,21 @@
+server:
+  port: 8100
+spring:
+  cache:
+    type: redis
+    redis:
+      cache-null-values: true
+      time-to-live: 40000
+  main:
+    web-application-type: servlet
+  security:
+    oauth2:
+      resourceserver:
+        jwt.issuer-uri: ${essentialcloud-issuer-uri}
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true
+logging:
+  level:
+    org:
+      springframework: INFO

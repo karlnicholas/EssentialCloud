@@ -1,0 +1,1 @@
+insert into broker_account(id, balance) values (1, '0.00');

@@ -15,9 +15,9 @@ spring:
           auth0:
             issuer-uri: ${essentialcloud-issuer-uri}
 
-logging:
-  level:
-    org:
-      springframework:
-        security: DEBUG
+#logging:
+#  level:
+#    org:
+#      springframework:
+#        security: DEBUG
 

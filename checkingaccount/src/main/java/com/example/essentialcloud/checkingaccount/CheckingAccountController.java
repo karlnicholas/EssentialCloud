@@ -57,7 +57,7 @@ public class CheckingAccountController {
                         .path("/api/v1/userinfo")
                         .queryParam("authenticationId", principalName)
                         .build())
-                .attributes(clientRegistrationId("auth0-login"))
+                .attributes(clientRegistrationId("auth0-api"))
                 .retrieve()
                 .bodyToMono(String.class)
                 .<Long>handle((userInfo, sink) -> {

@@ -23,7 +23,7 @@ public class UserInfoService {
         String userInfo = vOps.get(authenticationId);
         if ( userInfo == null ) {
             UserInfo database = userInfoRepository.findUserInfoByAuthenticationId(authenticationId)
-                    .orElseThrow(()->new UserInfoNotFoundException("UserInfo not found"));
+                    .orElseThrow(()->new UserInfoNotFoundException("UserInfo not found: " + authenticationId));
             userInfo = objectMapper.writeValueAsString(database);
             vOps.set(authenticationId, userInfo);
         }

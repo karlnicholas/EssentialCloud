@@ -7,7 +7,7 @@ spring:
         jwt.issuer-uri: ${essentialcloud-issuer-uri}
       client:
         registration:
-          auth0-login:
+          auth0-api:
             client-id: ${essentialcloud-client-id}
             client-secret: ${essentialcloud-client-secret}
             provider: auth0
@@ -24,4 +24,5 @@ server:
 logging:
   level:
     org:
-      springframework: INFO
+      springframework:
+        security: DEBUG

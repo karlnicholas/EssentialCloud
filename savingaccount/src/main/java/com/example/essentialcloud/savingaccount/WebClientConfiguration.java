@@ -51,7 +51,7 @@ public class WebClientConfiguration {
 
         OAuth2ClientCredentialsGrantRequestEntityConverter requestEntityConverter =
                 new OAuth2ClientCredentialsGrantRequestEntityConverter();
-        requestEntityConverter.addParametersConverter(source -> CollectionUtils.toMultiValueMap(Collections.singletonMap("audience", Collections.singletonList("https://jwtresourceapi"))));
+        requestEntityConverter.addParametersConverter(source -> CollectionUtils.toMultiValueMap(Collections.singletonMap("audience", Collections.singletonList("https://essentialcloud"))));
         accessTokenResponseClient.setRequestEntityConverter(requestEntityConverter);
 
         return accessTokenResponseClient;

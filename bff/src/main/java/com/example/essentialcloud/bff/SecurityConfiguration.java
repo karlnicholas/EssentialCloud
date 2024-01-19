@@ -78,22 +78,7 @@ public class SecurityConfiguration {
 
     private Consumer<OAuth2AuthorizationRequest.Builder> authorizationRequestCustomizer() {
         return customizer -> customizer
-                .additionalParameters(params -> params.put("audience", "https://jwtresourceapi"));
+                .additionalParameters(params -> params.put("audience", "https://essentialcloud"));
     }
 
-//    public OAuth2AccessTokenResponseClient<OAuth2AuthorizationCodeGrantRequest> accessTokenResponseClientLogin() {
-//        DefaultAuthorizationCodeTokenResponseClient accessTokenResponseClient =
-//                new DefaultAuthorizationCodeTokenResponseClient();
-//        accessTokenResponseClient.setRequestEntityConverter(new CustomRequestEntityConverter());
-//
-//        return accessTokenResponseClient;
-//    }
-//    @Bean
-//    public OAuth2AccessTokenResponseClient<OAuth2ClientCredentialsGrantRequest> accessTokenResponseClient() {
-//        DefaultClientCredentialsTokenResponseClient clientCredentialsTokenResponseClient = new DefaultClientCredentialsTokenResponseClient();
-//        clientCredentialsTokenResponseClient.setRequestEntityConverter(new CustomClientCredRequestEntityConverter());
-//
-//        OAuth2AccessTokenResponseClient<OAuth2ClientCredentialsGrantRequest> accessTokenResponseClient = clientCredentialsTokenResponseClient;
-//        return accessTokenResponseClient;
-//    }
 }
